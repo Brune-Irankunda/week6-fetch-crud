@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>CRUD Posts Manager</title>
+  <script type="module" src="/src/main.js"></script>
+  
 </head>
 
 <body class="bg-gray-100 min-h-screen">
@@ -19,22 +20,39 @@
 
   <main class="max-w-6xl mx-auto p-6">
 
+    <section class="mb-6">
+      <label for="user-filter" class="font-semibold mr-3">
+        Filter by User:
+      </label>
+
+      <select id="user-filter"
+        class="border border-gray-300 rounded-lg p-2 bg-white">
+        <option value="">All Users</option>
+        <option value="1">User 1</option>
+        <option value="2">User 2</option>
+        <option value="3">User 3</option>
+        <option value="4">User 4</option>
+        <option value="5">User 5</option>
+        <option value="6">User 6</option>
+        <option value="7">User 7</option>
+        <option value="8">User 8</option>
+        <option value="9">User 9</option>
+        <option value="10">User 10</option>
+      </select>
+    </section>
+
     <p id="status-message" class="mb-6 text-gray-600">
       Loading posts...
     </p>
 
     <section>
       <h2 class="text-2xl font-bold mb-6">All Posts</h2>
-
-      <div
-        id="posts-container"
-        class="grid grid-cols-1 md:grid-cols-2 gap-6"
-      ></div>
+      <div id="posts-container"
+        class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      </div>
     </section>
 
   </main>
-
-  <script type="module" src="/src/main.js"></script>
 
 </body>
 </html>
